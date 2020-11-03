@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block content %}
+<h1>Alphabetical Index Of Employees (using last name)</h1>
+    <div class="letters-container">
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+        <button>{{ 42 }}</button>
+    </div>
+    <ul>
+        {% for alphabet in alphabet_list %}
+{#            {% if first_letters in letters_variants %}#}
+                <li>
+                    <a href="{% url 'last_name' last_name=alphabet.last_name %}">{{ alphabet.last_name }}</a>
+                </li>
+{#            {% endif %}#}
+      {% endfor %}
+    </ul>
+
+{% endblock %}
