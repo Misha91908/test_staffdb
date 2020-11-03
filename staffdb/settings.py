@@ -26,7 +26,7 @@ SECRET_KEY = 'se1&dl+ert-n@1wx$o%0y+9u7fft0%7ee4!v2n8h1@ngxk^3uf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pure-anchorage-13010.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['staff-database.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'staffdb',
         'USER': 'staffdbuser',
         'PASSWORD': 'v4y78y8f',
-        'HOST': 'pure-anchorage-13010.herokuapp.com',
+        'HOST': 'staff-database.herokuapp.com',
         'PORT': '',
     }
 }
