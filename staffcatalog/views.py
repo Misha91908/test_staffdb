@@ -27,17 +27,6 @@ class PersonListView(generic.ListView):
 
         return context
 
-    def get_queryset(self):
-        state = []
-        departments = []
-        if self.request.method == 'POST':
-            state = self.request.POST.getlist('state')
-            departments = self.request.POST.getlist('departments')
-            print(state, departments)
-
-        queryset = Person.objects.all()
-        return queryset
-
     def post(self, request):
 
         state = ''
