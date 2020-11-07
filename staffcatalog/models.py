@@ -30,10 +30,6 @@ class Person(models.Model):
 class Alphabet(models.Model):
     id = models.IntegerField(primary_key=True)
     last_name = models.CharField(max_length=30)
-    # is_visible = models.BooleanField(default=False)
-    #
-    # def get_last_name_first_letter(self):
-    #     return self.objects.get(last_name=self.last_name)
 
     def get_absolute_url(self):
         return reverse('alphabet', kwargs={'last_name': str(self.last_name)})
