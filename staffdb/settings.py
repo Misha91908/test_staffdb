@@ -26,7 +26,7 @@ SECRET_KEY = 'se1&dl+ert-n@1wx$o%0y+9u7fft0%7ee4!v2n8h1@ngxk^3uf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['staff-database.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -38,12 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'staffcatalog.apps.StaffcatalogConfig',
+    'staffcatalog.apps.StaffcatalogConfig'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,7 +81,7 @@ DATABASES = {
         'NAME': 'staffdb',
         'USER': 'staffdbuser',
         'PASSWORD': 'v4y78y8f',
-        'HOST': 'staff-database.herokuapp.com',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
@@ -126,5 +125,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-

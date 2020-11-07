@@ -9,12 +9,12 @@ class Person(models.Model):
     id = models.IntegerField(primary_key=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    patronymic = models.CharField(max_length=30)
+    patronymic = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField()
     email = models.EmailField()
     phone_number = models.CharField(max_length=30)
-    job_assign = models.DateField()
-    job_end = models.DateField()
+    job_assign = models.DateField(null=True)
+    job_end = models.DateField(null=True, blank=True)
     position = models.CharField(max_length=100)
     department = models.CharField(max_length=100)
 
@@ -30,10 +30,10 @@ class Person(models.Model):
 class Alphabet(models.Model):
     id = models.IntegerField(primary_key=True)
     last_name = models.CharField(max_length=30)
-    is_visible = models.BooleanField(default=False)
-
-    def get_last_name_first_letter(self):
-        return self.objects.get(last_name=self.last_name)
+    # is_visible = models.BooleanField(default=False)
+    #
+    # def get_last_name_first_letter(self):
+    #     return self.objects.get(last_name=self.last_name)
 
     def get_absolute_url(self):
         return reverse('alphabet', kwargs={'last_name': str(self.last_name)})
