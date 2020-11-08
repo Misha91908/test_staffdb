@@ -6,7 +6,7 @@
 - https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/%D0%A0%D0%B0%D0%B7%D0%B2%D0%BE%D1%80%D0%B0%D1%87%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5
 - https://devcenter.heroku.com/articles/getting-started-with-python#set-up
 
-1) Зарегистрироваться на Heroku, установить heroku CLI
+1) Зарегистрироваться на Heroku, установить Heroku CLI
 
 ```
 sudo snap install heroku --classic
@@ -58,7 +58,7 @@ heroku open
 ```
 ____
 
-b) Запуск через веб-интерфейс heroku
+b) Запуск через веб-интерфейс Heroku
 
 5) Открыть созданное приложение в главном меню и перейти в нем во вкладку Deploy
 
